@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+   
+    @keyframes spin {
+      0% { transform: rotate(-10deg); }
+      50% { transform: rotate(10deg); }
+      100% { transform: rotate(-10deg); }
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.25em;
+      color: #3c502c;
+      margin-top: -1.2em;
+      margin-bottom: 2em;
+      letter-spacing: 1px;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 500;
+    }
+  </style>
+  <style>
+    /* Simple navigation bar styles */
+    nav {
+      background: #3c502c;
+      padding: 0.5em 0;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.2em;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    /* Search bar styles */
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2em;
+    }
+    .search-bar input[type="text"] {
+      padding: 0.5em 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      font-size: 1em;
+      width: 220px;
+    }
+    .search-bar button {
+      padding: 0.5em 1.2em;
+      border: none;
+      background: #0b5dd7;
+      color: #fff;
+      border-radius: 0 4px 4px 0;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-bar button:hover {
+      background: #0f5015;
+    }
+    /* Footer styles */
+    footer {
+      background: #082b0a;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0 0.5em 0;
+      margin-top: 3em;
+      border-radius: 8px 8px 0 0;
+      font-size: 1em;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      margin: 0 0.5em;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>VIDHYA BHARAT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAACUCAMAAADF0xngAAAAY1BMVEX///8AAAAqKipDQ0Pj4+Oenp7U1NQ6Ojrt7e0+Pj63t7e6urp5eXl8fHzHx8e0tLTc3NyPj49VVVWtra2Xl5cgICD19fUaGhoVFRVkZGRsbGylpaUxMTFLS0uDg4PBwcELCwsiv1IsAAADiklEQVR4nO2caXeqMBBAyyIEsGGJBFnl///KR7B4IBplCSSvnful6lS4JwGcJAxfX/uBIowdm+64h9Wg0A9t9iJoXINRhLznBSnwmhIZrRF2f/LWGKjw+B9oYehgaXSWoTGhvg3tSf2roY1lY3AUhKnZZc7e6GIZ85aGkaVmer2/1NhyBFiCJViCJViCJViC5R+yzIrmO9Hbss0dlp9T6lstJ1modnzk6slorIPziWSpTu7B3dKZdCq9eQ9HC4u+eSR3yydw4ZmZ6SXO8UYvcM6dZf6qvZCDHfWnDQMVad+tWW6rVhESnccncqRa5yV2nE5O5bbR4xgcgzjHvt8bPY7DAfsi+C2MNer3iyWQNAy30WNmEJWZ0JFx1WAiEIXVW8fekyj2JPVHR4Z1UaeI/Pd9PaZV1Z7+y9xRSE0UOOLPxyNPFRzsGMw7Hnlc/8DrEi5WOTJy/yBHZ107DlT4gPbc0I4DyW1nR/s8/+LzhpdpsiwmCeQ26r36PWqu0iQ7znu0J/02ZToaeww7IlECuY1CZnuiy/Ifmnm0jaw0mcZSj0fes5CRhqCT7OPxie3DjpkJ5DaqeMtliQYHKN6JV5/v5bIEchvmuuHR7UhHhhsvVaRYPHjdkdOifpeQ+KzDO80+j6KEn2M+EHOepyMv8VlHNWO4WTzPSh1O/XG2TrVhz8dBsWrBHrCUB1jKAyzl8UssU1M96YuFzCm2DuixrgEAvxUantTxVCkgAh0xnyGinjssR0ePxMckYAmWYAmWvaWS+bYfrLmW1MF3An5pIh4iDIeP5pNozkWrcRTzN7tWwfC9xbkl8rhtTZfhXS76PYl+c1F3EuXnwr31KxVPltPFbd7yDJZgCZZgCZZgCZZgCZZgCZZgCZZgCZZgCZZgCZZgCZZgCZZg+Yctp+s9fPT9eo+3h6VNSFjy5SiNT0hfOEQJIQEfTYLuw/6BJewFv5hpdh+SfmEME+Lzj/gzy5CQ5bUUwkKPnO0pEkVdtiebb+UHrEaG8mt/D5ZXyN5Em+qf4mKLojWzFN+e0reWsLBgWX0XRQiFok3ldhfFoqjldNFIaIm7KBJahl1w/mJp6VqWsNIs8yzL4k/vB1cW9YQlYN2GLUt4337VbXj+s2z2Kdibx/yqfbAESx0tT5myG5ez02xL21GHvg82AlQR1ZYu1OIK40jKoxWkkL2x1KB+74cULKXxP1r+A330ZTQnSkwUAAAAAElFTkSuQmCC" type="image/x-icon">
+<body>
+  <div class="title-icon">
+    <i class="fas fa-landmark"></i>
+  </div>
+  <div class="main-header">
+    <div class="subtitle">Empowering Citizens Through Government Initiatives</div>
+    <h1>VIDHYA BHARAT</h1>
+  </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#schemes">Schemes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <form class="search-bar" onsubmit="alert('Search feature coming soon!'); return false;">
+    <input type="text" placeholder="Search schemes..." />
+    <button type="submit">Search</button>
+  </form>
+  <footer>
+    &copy; 2025 Central Govt Schemes | <a href="#">Privacy Policy</a> | <a href="#">Contact</a>
+    <div style="margin-top:0.5em; font-size:0.95em;">Follow us:
+      <a href="#" title="Twitter">Twitter</a> |
+      <a href="#" title="Facebook">Facebook</a> |
+      <a href="#" title="Instagram">Instagram</a>
+    </div>
+  </footer>
+  <section style="background: rgba(255,255,255,0.85); margin: 2em auto; max-width: 700px; padding: 1.5em 2em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
+    <h2>About the Schemes</h2>
+    <p>
+      The Central Government of India has launched several schemes to promote social welfare, economic growth, and empowerment of its citizens. These schemes target various sectors such as entrepreneurship, women empowerment, financial inclusion, and more. Explore the dropdown menus above to learn about each scheme, visit their official websites, and access detailed information and resources.
+    </p>
+    <ol>
+      <li><strong>Startup India:</strong> An initiative to foster innovation and support startups in India.</li> <br>
+      <li><strong>Beti Bachao Beti Padhao:</strong> A campaign to promote the education and welfare of girls.</li> <br>
+      <li><strong>Pradhan Mantri Jan Dhan Yojana:</strong> A financial inclusion program to provide banking access to all households.</li>
+    </ol>
+  </section>
+  <!-- Main title moved above inside .main-header -->
+  <style>
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5em;
+    }
+    .main-header h1 {
+      margin-top: 0.2em;
+      margin-bottom: 0.5em;
+    }
+  </style>
+  <p>Welcome to the Central Government Schemes page. Here you will find information about various schemes initiated by the government to support and empower citizens across different sectors.</p>
+  <h2>Popular Schemes</h2>
+  
+  <div class ="dropdown">
+      <button class="dropbtn">Startup India</button>
+      <div class="dropdown-content">
+        <a href="https://www.startupindia.gov.in/">Official Website</a>
+        <a href="https://www.investindia.gov.in/team-india-blogs/startup-india-initiative">About Startup India</a>
+      </div>
+    </div>
+    <br>
+
+    <div class="dropdown">
+      <button class="dropbtn">Beti Bachao Beti Padhao</button>
+      <div class="dropdown-content">
+        <a href="https://wcd.gov.in/women/beti-bachao-beti-padhao">Official Website</a>
+        <a href="https://www.india.gov.in/spotlight/beti-bachao-beti-padhao-bbbp-scheme">About the Scheme</a>
+      </div>
+    </div>
+<br>
+    <div class="dropdown">
+      <button class="dropbtn">Pradhan Mantri Jan Dhan Yojana</button>
+      <div class="dropdown-content">
+        <a href="https://pmjdy.gov.in/">Official Website</a>
+        <a href="https://www.india.gov.in/spotlight/pradhan-mantri-jan-dhan-yojana">About the Scheme</a>
+      </div>
+    </div>
